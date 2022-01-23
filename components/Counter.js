@@ -1,14 +1,14 @@
 import React from "react";
 import {View, Text, StyleSheet, Button} from 'react-native';
 
-function Counter ({count, onIncrease, onDecrease}) {
+function Counter ({a, b, c}) {
     return(
         <View style={styles.wrapper}> 
             <View style={styles.numberArea}>
-                <Text style={styles.number}>{count}</Text>
+                <Text style={styles.number}>{a}</Text>
             </View>
-            <Button title="+1"  onPress={onIncrease}/>
-            <Button title="-1"  onPress={onDecrease}/>
+            <Button title="+1"  onPress={b}/>
+            <Button title="-1"  onPress={c}/>
         </View>
     );
 }
@@ -18,7 +18,7 @@ const styles =StyleSheet.create({
     },
     numberArea: {
         flex: 1, //button컴포넌트를 제외한 모든영역
-        alignItems: 'center',  //가로정렬을 하고 중앙에 결과값 표시
+        alignItems:'flex-end',
         justifyContent: 'center', //세로정렬을 하고 중앙에 결과값 표시
     },
     number: {
